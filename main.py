@@ -1,4 +1,5 @@
 import os
+import uvicorn
 import dotenv
 import smtplib
 
@@ -59,3 +60,6 @@ def envia_email(contato: Contato):
     
     return "Email enviado!"
 
+
+if __name__ == "__main__":
+    uvicorn.run(app, debug=True)
