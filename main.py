@@ -12,9 +12,26 @@ from pydantic import BaseModel
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
+from fastapi.middleware.cors import CORSMiddleware
+
 dotenv.load_dotenv()
 
 app = FastAPI()
+
+origins = [
+    "https://api-python-portifolio.herokuapp.com/",
+    "https://api-python-portifolio.herokuapp.com",
+    "https://api-python-portifolio.herokuapp.com/docs",
+    "https://api-python-portifolio.herokuapp.com/contato"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Rota Raiz
 @app.get("/")
