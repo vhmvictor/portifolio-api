@@ -56,7 +56,7 @@ def envia_email(contato: Contato):
     msg['From'] = email_from
     msg['Subject'] = contato.assunto
 
-    text = contato.mensagem + " Remetente: <br/>" + contato.email
+    text = contato.mensagem + "<br/> Remetente: " + contato.email
     msg_text = MIMEText(text, 'html')
     msg.attach(msg_text)
 
