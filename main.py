@@ -20,9 +20,8 @@ app = FastAPI()
 
 origins = [
     "https://api-python-portifolio.herokuapp.com/",
-    "https://api-python-portifolio.herokuapp.com",
-    "https://api-python-portifolio.herokuapp.com/docs",
-    "https://api-python-portifolio.herokuapp.com/contato"
+    "https://victorhugomarques-portifolio.netlify.app/",
+    "https://victorhugomarques-portifolio.netlify.app"
 ]
 
 app.add_middleware(
