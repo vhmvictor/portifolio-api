@@ -19,9 +19,9 @@ dotenv.load_dotenv()
 app = FastAPI()
 
 origins = [
-    "https://victorhugomarques-portifolio.netlify.app/",
-    "https://victorhugomarques-portifolio.netlify.app",
-    "https://api-python-portifolio.herokuapp.com/"
+    "https://victorhugomarques-portfolio.netlify.app/",
+    "https://victorhugomarques-portfolio.netlify.app",
+    "https://api-python-portfolio.herokuapp.com/"
 ]
 
 app.add_middleware(
